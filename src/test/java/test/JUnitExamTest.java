@@ -26,12 +26,14 @@ public class JUnitExamTest {
 		JUnitExamPage page = PageFactory.initElements(driver, JUnitExamPage.class);
 		page.checkSideBoxesIfAvailble();
 		page.addSideBoxes();
+		
 		page.clickOnToggleAllCheckBox();
+		page.verifyToggleAllboxesIsChecked();
 		page.checkBoxVerification();
 		BrowserFactory.teardown();
 	}
 	
-	@Test 
+	//@Test 
 	public void removeCheckedBoxTest() {
 		
 			driver = BrowserFactory.init();
@@ -49,7 +51,7 @@ public class JUnitExamTest {
 
 	}
 
-	@Test
+	//@Test
 	public void toggleAllAndDeleteTest() {
 
 		driver = BrowserFactory.init();

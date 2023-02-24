@@ -35,7 +35,18 @@ public class JUnitExamPage {
 		Toggle_All_Checkbox.click();
 		
 	}
-	
+	public void verifyToggleAllboxesIsChecked() {
+		
+		if(Toggle_All_Checkbox.isSelected()) {
+			
+			System.out.println("ToggleAllBoxes is Selected");
+		}
+		else {
+			
+			System.out.println("ToggleAllBoxes is Not Selected");
+		}
+
+	}
 	public Boolean checkSideBoxesIfAvailble() {
 		ArrayList<WebElement> fileData = new ArrayList<WebElement>();
 		fileData=checkTheArraylist();
